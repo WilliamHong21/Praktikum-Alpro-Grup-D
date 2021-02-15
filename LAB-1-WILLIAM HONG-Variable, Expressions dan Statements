@@ -1,0 +1,66 @@
+
+#Nama: William Hong / 71200617
+#Mahasiswa Universitas Kristen Duta Wacana
+#Mata kuliah: Praktikum Algoritma dan Pemrograman Grup D
+
+#Soal
+#Suatu hari dapa ingin membuka usaha dengan menjual minuman dipinggir pasar. minuman yang ingin dijual adalah Milo dan Kopi.
+#Untuk Harga Milo Panas dijual dengan harga Rp.6000 sedangkan untuk yang dingin dijual dengan harga Rp.8000
+#Untuk Harga Kopi Panas dijual dengan Harga Rp.5000 sedangkan untuk yang dingin dijual dengan harga Rp.6000
+#Buatlah sebuah program untuk membantu dapa berjualan.
+
+#Ada 2 jenis milo, yaitu milo panas dan milo dingin, dan juga ada kopi panas dan kopi dingin yang ingin dijual
+
+#Input:harganya
+#milopanas = 6000, milodingin = 8000, kopipanas = 5000, kopidingin = 6000
+
+#Proses:percabangan,while True,Inputan 
+
+#Output: harganya dan berapa banyak dibeli
+while True:
+    print('===========Minuman============')
+    print('daftar harga\nmilo panas = Rp.6000, milo dingin = Rp.8000\nkopi panas = Rp.5000, kopi dingin = Rp.6000')
+    print('Ketik 1 untuk membeli milo\nketik 2 untuk membeli kopi\nketik 3 untuk exit')
+    milopanas = 6000
+    milo_dingin = 8000
+    kopipanas = 5000
+    kopi_dingin = 6000
+    a = int(input('Masukkan angkanya: '))
+    if a == 1:
+        banyak_milo = int(input('Mau berapa: '))
+        print('ketik 1 untuk milo panas\nketik 2 untuk milo dingin')
+        milo_cup = int(input('masukkan angkanya: '))
+        if milo_cup == 1:
+            harga_milo_panas = milopanas*banyak_milo
+            print('harganya adalah: ', harga_milo_panas)
+        elif milo_cup == 2:
+            harga_milo_dingin = milo_dingin*banyak_milo
+            print('harganya adalah: ', harga_milo_dingin)
+        else:
+            print('masukkin yang benar')
+    elif a == 2:
+        banyak_kopi = int(input('mau berapa: '))
+        print('ketik 1 untuk kopi panas\nketik 2 untuk kopi dingin')
+        kopi_cup = int(input('masukkan angkanya: '))
+        if kopi_cup == 1:
+            harga_kopi_panas = kopipanas*banyak_kopi
+            print('harganya adalah: ', harga_kopi_panas)
+        elif kopi_cup == 2:
+            harga_kopi_dingin = kopi_dingin*banyak_kopi
+            print('harganya adalah: ', harga_kopi_dingin)
+        else:
+            print('masukkin yang benar')
+    elif a == 3:
+        print('Terima kasih sudah membeli')
+        break
+    else:
+        print('masukkin yang benar')
+
+
+
+
+
+
+
+
+
