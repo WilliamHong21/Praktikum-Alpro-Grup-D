@@ -1,0 +1,60 @@
+#Nama: William Hong / 71200617
+#Universitas Kristen Duta Wacana
+#Praktikum Algoritma dan Pemrograman D
+
+#Pada saat itu dapa sukses menjual milo dan kopi, dan dapa ingin menjual barang baru lagi. Dapa ingin menjual pakaian yang
+#baru ia buat saat itu yaitu baju lengan pendek polos Hitam dan Putih. tersedia size M, L, Dan XL. Ia menjual baju lengan pendek hitam  dengan harga Rp.150000 dan
+#lengan pendek putih dengan harga Rp.160000, dan dapa ingin juga membuat sebuah program yang mana program itu akan menyarankan size baju 
+#sesuai dengan ukuran tubuh pembeli. untuk size M ukuran tinggi badan adalah 155-165 dan BB adalah 40 - 60. 
+#Untuk Size L Ukuran tinggi dari 165 - 175 dan BB 52 - 73. Size XL Ukuran Tinggi dari 170-185 dan BB dari 61-82.
+#buatlah sebuah program
+
+#Input: daftar harga, harga bajunya, program untuk menyrankan size baju
+# Proses: if else, while True, inputan
+# Output: harga bajunya, size bajunya
+# 
+#  
+while True:
+    print('-----------daftar harga------------\nBaju Lengan Pendek Hitam = Rp.150000\nBaju Lengan Pendek Putih = Rp.160000.')
+    print("Tersedia Size M, L, Dan XL.")
+    print()
+    print("ketik 1 untuk membeli Baju Lengan Pendek")
+    print('Ketik 2 Untuk Saran Size baju sesuai berat dan tinggi badan')
+    print('ketik 3 untuk exit')
+    b = ('Lengan Pendek')
+    lenganpendekhitam = 150000
+    lenganpendekputih = 160000
+    a = int(input('masukkan pilihannya: '))
+    if a == 1:
+        warna = input('mau warna hitam atau putih: ')
+        if warna == 'hitam'.lower():
+            size = input('Mau size apa: ')
+            if size == 'M'.lower() or size == 'L'.lower() or size == 'XL'.lower():
+                jumlah = int(input('Mau berapa: '))
+                jumlahharga = jumlah*lenganpendekhitam
+                print('Pembelian baju lengan pendek hitam dengan size', size , " dengan harga Rp.", jumlahharga )
+                warna = input('mau warna hitam atau putih: ')
+        elif warna == 'putih'.lower():
+            size = input('Mau size apa: ')
+            if size == 'M'.lower() or size == 'L'.lower() or size == 'XL'.lower():
+                jumlah = int(input('Mau berapa: '))
+                jumlahharga = jumlah*lenganpendekputih
+                print('Pembelian baju lengan pendek putih dengan size', size , " dengan harga Rp.", jumlahharga )
+    elif a == 2:
+        beratbadan = int(input('masukkin berat badan: '))
+        tinggibadan = int(input("masukkin tingginya: "))
+        if tinggibadan >=155 and tinggibadan <=165 and beratbadan >=40 and beratbadan <=60:
+            print('Size yg cocok adalah M')
+        elif tinggibadan >=165 and tinggibadan <=175 and beratbadan >=52 and beratbadan <=73:
+            print('Size yg cocok adalah L')
+        elif tinggibadan >=170 and tinggibadan <=185 and beratbadan >=61 and beratbadan <=82: 
+            print('size yg cocok adalah Xl')
+        else:
+            print('masukkin format yang benar')
+    elif a == 3:
+        print('terima kasih sudah berbelanja')
+        break 
+    else:
+        print('masukkin yang benar')  
+  
+
