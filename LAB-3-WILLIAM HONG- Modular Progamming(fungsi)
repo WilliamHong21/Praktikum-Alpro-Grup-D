@@ -1,0 +1,71 @@
+#Nama: William Hong /71200617
+#Matkul: Praktikum Algoritma dan Pemrograman Grup D
+
+#Buatlah sebuah program menghitung volume tabung dan kerucut, luas segitiga, luas trapesium
+
+#Input: rumus tabung, rumus kerucut, rumus segitiga, rumus luas trapesium, alas dan tingginya, jari jari + tinggi, alas + tinggi , jumlah panjang sisi sejajar tinggi
+#Prosesnya: input, percabangan, perulangan, try except, function
+#output: hasil dari perhitungan tabungnya dan kerucutnya dan luas segitiga
+
+def tabung(a,b):
+    phi = 22/7
+    k = phi*(a**2)*b
+    return k
+
+def kerucut(a,b):
+    phi = 22/7
+    k = 1/3*phi*(a**2)*b
+    return k
+
+def segitiga(a,b):
+    k = 1/2*a*b
+    return k
+
+def trapesium(a,b):
+    k = 1/2*a*b
+    return k
+
+
+print('''Program Penghitung
+ketik 1 untuk volume tabung
+ketik 2 untuk volume kerucut
+ketik 3 untuk mengihutng luas segitiga
+keitk 4 untuk menghitung luas trapesium
+ketik 5 untuk exit
+''')
+
+try:
+    while True:
+        inputan = float(input('Masukkan angkanya: '))
+        if inputan == 1:
+            a = float(input('masukkin alasnya: '))
+            b = float(input('masukkin tingginya: '))
+            h = tabung(a,b)
+            print(f'alasnya = {a} dan tingginya {b}')
+            print(f'hasilnya adalah {h}')
+        elif inputan == 2:
+            a = float(input('masukkan jari-jarinya: '))
+            b = float(input('masukkan tingginya: '))
+            h = kerucut(a,b)
+            print(f' jari-jarinya= {a} dan tingginya {b}')
+            print(f'hasilnya adalah {h}')
+        elif inputan == 3:
+            a = float(input('masukkan alasnya: '))
+            b = float(input('masukkan tingginya: '))
+            h = segitiga(a,b)
+            print(f' jari-jarinya= {a} dan tingginya {b}')
+            print(f'hasilnya adalah {h}')
+        elif inputan == 4:
+            a = float(input('masukkan jumlah panjang sisi sejajar: '))
+            b = float(input('masukkan tingginya: '))
+            h = trapesium(a,b) 
+            print(f' jari-jarinya= {a} dan tingginya {b}')
+            print(f'hasilnya adalah {h}')
+        elif inputan == 5:
+            print('program berhenti')
+            break
+        else:
+            print('masukkin dengan benar')
+except:
+    print('masukkan angka')
+
