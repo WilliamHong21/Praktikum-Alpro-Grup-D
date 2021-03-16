@@ -1,0 +1,56 @@
+#Nama: William Hong / 71200617
+#Prodi: Informatika
+#Matkul: Praktikum Algoritma dan Pemrograman D
+#UNIVERSITAS KRISTEN DUTA WACANA
+
+#Sebuah program menyusun kata 
+
+#input = list, input, 
+#Proses = perulangan, percabangan, 
+#Output = Point
+
+print('''PROGRAM MENYUSUN NAMA NEGARA
+Ketik 1 Untuk Bermain
+ketik 2 untuk NGECEK POINT
+KETIK 3 UNTUK BERHENTI
+''')
+import random
+game_list1 = ["TUVALU","VIETNAM","BRAZIL","SINGAPURA","AUSTRALIA","JEPANG","INDONESIA","POLANDIA"]
+game_list = ["LTUVUA", "NATVEIM","ZBLRAI","PSIGNAARU,","LIASURTAA","NDINEOISA,'NGJAPE","NDPLONAI"]
+angka = []
+e = 0
+while e == 0:
+    pilihan = int(input("masukkan pilihan: "))
+    if pilihan == 1:
+        koin = int(input("masukkan jumlah koin: "))
+        if koin > 5:
+            print('BATAS SUDAH MELEBIHI')
+        else:
+            if koin <=5 or koin >=1:
+                i = 0
+                for i in range(1,koin+1):
+                    namanegara = i
+                    if namanegara <= 5 or namanegara >=1:
+                        pilihan_random = random.choice(game_list)
+                        print(f'==========={pilihan_random}===========')
+
+                    nama = input('SUSUN DENGAN BENAR: ')
+                    if nama in game_list1:
+                        print('Benar, anda mendapatkan 100 poin')
+                        point = 100
+                        angka.append(point)
+                    else:
+                        print('SALAH')
+                        point = 100
+                        angka.remove(point)
+                        print("BERKURANG 100 POINT")
+                        
+    elif pilihan == 2:
+        print(angka)
+        print('Point yang didapatkan saat ini adalah',sum(angka))
+
+    elif pilihan == 3:
+        print('TERIMA KASIH')
+        break
+    else:
+        print('MASUKKIN YANG BENAR')
