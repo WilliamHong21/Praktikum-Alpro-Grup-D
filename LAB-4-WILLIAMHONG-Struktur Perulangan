@@ -1,0 +1,53 @@
+#Nama: William Hong / 71200617
+#Matkul: Praktikum Algoritma dan Pemrograman D
+
+#buatlah sebuah program untuk menglist buah dan sayur yang ingin dibeli
+
+#input: buah,sayur,
+#proses:inputan,perulangan,percabangan
+#output:hasil list yg sudah dilist oleh pengguna
+
+print('List nama sayur dan buah yang ingin dilist')
+namasayur = []
+namabuah = []
+x = 0 
+while x == 0:
+    nama = input('Nama sayur: ')
+    namasayur.append(nama)
+    tanyasayur = input('''Ada tambahan: 
+    KETIK Y untuk lanjut list
+    keti T untuk menglist buah
+    
+    ''')
+
+    if tanyasayur == 'Y':
+        continue
+    elif tanyasayur == 'T':
+        a = input('nama buah: ')
+        namabuah.append(a)
+        tanyabuah = input('''Ada tambahan
+        Ketik Y untuk lanjut list
+        ketik T untuk selesai
+        
+        ''')
+        if tanyabuah == 'Y':
+            continue
+        elif tanyabuah == 'T':
+            print('====================')
+            x = 1
+            break
+        else:
+            print('KAMU SALAH TULIS')
+            break
+    else:
+        print('KAMU SALAH TULIS')
+
+
+print('SAYUR YANG SUDAH DILIST',len(namasayur))
+for x in range(len(namasayur)):
+    print('---',namasayur[x])
+
+
+print('BUAH YANG SUDAH DILIST',len(namabuah))
+for x in range(len(namabuah)):
+    print('---',namabuah[x])
