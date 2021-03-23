@@ -1,0 +1,40 @@
+#NAMA: WILLIAM HONG / 71200617
+#MAHASISWA UNIVERSITAS KRISTEN DUTA WACANA
+#PRAKTIKUM ALGORTIMA GRUP D
+
+#input = list,string
+#proses = inputan, for, 
+#output = jumlah huruf vokal,konsonan, besar, dan kecil, list
+
+a = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+b = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+c =  ['a','i','u','e','o','A','I','U','E','O']
+d = ['b','c','d','f','g','h','j','k','l','m','n',
+'p','q','r','s','t','v','w','x','y','z','B',
+'C','D','F','G','H','J','K','L','M','N','P',
+'Q','R','S','T','V','W','X','Y','Z']
+inputan = str(input('masukkan kata: '))
+hurufkecil = 0
+hurufbesar = 0
+hurufvokal = 0
+hurufkonsonan = 0
+for i in inputan:
+    if i in a:
+        hurufkecil += 1
+    if i in b:
+        hurufbesar += 1
+    if i in c:
+        hurufvokal += 1
+    if i in d:
+        hurufkonsonan += 1
+print('HURUF KECILNYA ADA', hurufkecil)
+print('HURUF BESARNYA ADA', hurufbesar)
+print('HURUF VOKALNYA ADA',hurufvokal)
+print('HURUF KONSONANNYA ADA',hurufkonsonan)
+
+from collections import Counter
+listkosong = inputan.split()
+c = Counter()
+for word in listkosong:
+    c[word] += 1
+print(c)
