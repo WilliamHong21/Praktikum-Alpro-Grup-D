@@ -1,0 +1,46 @@
+#Nama: William Hong
+#Matkul: Praktikum Algoritma Dan Pemrograman Grup D
+#UG8 No 2
+#membuat sebuah program utk menyimpan nomor mahasiswa diteks
+#input: nama,nomor telepon,prodi
+#proses: inputan akan masuk ke sebuah dokumen kosong
+#Output: 
+
+print('''======TUGAS=======
+1. Tambah Data
+2. Lihat Data
+3. Exit
+''')
+while True:
+    inputan = int(input('masukkan nomor: '))
+    if inputan == 1:
+        file = open("D:\\daftarmahasiswa.txt",'a+')
+        print("MENU DATA")
+        inputbanyak = int(input('Mau berapa banyak: '))
+        for i in range(0,inputbanyak):
+            inputnama = str(input('masukkan nama: '))
+            inputnomor = str(input('masukkan nomor: '))
+            inputprodi = str(input('masukkan prodi'))
+            b = str(inputnama)+'\t'+str(inputnomor)+'\t'+str(inputprodi) + '\n'
+            file.write(b)
+        file.close()
+    if inputan == 2:
+        print('=========DATA========')
+        print('NAMA'+"\t"+"NOMOR TELEPON"+"\t\t"+"PRODI")
+        file = open("D:\\daftarmahasiswa.txt",'r')
+        print(file.read())
+        file.close()
+    if inputan == 3:
+        break
+        
+
+
+
+       
+
+   
+
+        
+
+
+ 
