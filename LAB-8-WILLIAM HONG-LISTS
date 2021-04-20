@@ -1,0 +1,46 @@
+#NAMA: WILLIAM HONG / 71200617 
+#MATKUL: PRAKTIKUM ALGORITMA DAN PEMROGRAMAN D
+#PRODI INFORMATIKA
+#UNIVERSITAS KRISTEN DUTA WACANA
+
+#PROGRAM GAME GUNTING BATU KERTAS
+
+#INPUT:gunting,batu,kertas
+#PROSES: menginpput gunting batu kertas untuk melawan komputer 
+#OUTPUT: poin yang didapatkan pada saat menang, poin ditampilkan jika sudah kalah 3 kali/nyawa sudah habis
+lst = []
+kalah = [1,1,1]
+
+pemain = False
+while pemain == False: 
+    import random
+    game = ['gunting','batu','kertas']
+    i = random.choice(game)
+    print("===========================================")
+    data = input('gunting, batu, atau, kertas: ')
+    if data == 'gunting'.lower():
+        if data == i:
+            print('seri')
+        if i == 'batu'.lower():
+            print(f'{data} melawan {i} maka kamu kalah')
+            kalah.remove(1)
+        if i == 'kertas'.lower():
+            print(f'{data} melawan {i} maka kamu menang')
+            lst.append(1)
+    if data =='kertas'.lower():
+        if i == 'gunting'.lower():
+            print(f'{data} melawan {i} maka kamu kalah')
+            kalah.remove(1)
+        if i == 'batu':
+            print(f'{data} melawan {i} maka kamu menang')
+            lst.append(1)
+    if data == 'batu'.lower():
+        if i == 'kertas':
+            print(f'{data} melawan {i} maka kamu kalah')
+            kalah.remove(1)
+        if i == 'gunting'.lower():
+            print(f'{data} melawan {i} maka kamu menang')
+            lst.append(1)
+    if kalah == []:
+        print(f'NYAWA KAMU SUDAH HABIS, KAMU MENDAPATKAN {sum(lst)} poin')
+        break
