@@ -1,0 +1,22 @@
+#NAMA: WILLIAM HONG / 71200617
+#PRAKTIKUM ALGORITMA DAN PEMROGRAMAN
+#UNIVERSITAS KRISTEN DUTA WACANA
+
+#Input = isi tuple, fungsi, set
+#Output = 
+def duplikattuple(Input):
+    visit = set()
+    output = []
+    for a, b in Input:
+        if not a in visit:
+            visit.add(a)
+            output.append((a,b))
+    print("Case Tuple sebelum duplikat \n", Input)
+    print('Case yang sudah diduplikat \n',output)
+
+Input = [(212,"Nama: Gerry"),
+        (123,"Nama: Yuyun"),
+        (212,"Nama: Gerry"),
+        (456,"Nama: Erki")
+]
+duplikattuple(Input)
