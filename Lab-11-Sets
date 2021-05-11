@@ -1,0 +1,18 @@
+#NAMA: WILLIAM HONG / 71200617
+#MATKUL: PRAKTIKUM ALGORITMA DAN PEMROGRAMAN 
+
+#SOAL
+# Leonardo De Capricorn sanagt senang sekali dalam menghitung jumlah huruf unik yang terdapar didalam sebuah kata. 
+# Suatu hari dia sangat bosan menghitung jumlah huruf unik tetapi tetap ingin menghitungnya. 
+# Karena Anda tau kondisi Lenonardo De Capricorn, Anda tersentuh hatinya dan langsung ingin membantu. 
+# Buatlah program yang dapat meghitung dan mencari kata manakah yang memiliki kata unik didalam sebuah set! 
+    
+a = {"matematika","Algoritma","Sejarah","Geografi","BahasaIndonesia","BahasaInggris","Fisika"}
+b = set()
+for i in a:
+    b.add(len(i))
+for i in a:
+    if len(i) == max(b):
+        f = set(i)
+        e = len(f)
+        print(f'Huruf unik yang terbanyak adalah {i} dengan jumlah {e}')
