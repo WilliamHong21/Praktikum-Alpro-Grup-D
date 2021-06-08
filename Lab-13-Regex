@@ -1,0 +1,28 @@
+#NAMA: WILLIAM HONG / 71200617
+#PRAKTIKUM ALGORITMA DAN PEMRORGRAMAN
+
+import re
+def hasil(a):
+    b = re.findall('\d+',a)
+    print(b)
+    a = 0
+    for i in b:
+        a += int(i)
+    print(a,'total engagement')
+
+hasil('''Dalamsehari diketahui bahwaAda100000orang yang me-followakun igdariakunmiloo
+Indonesia.Dalamkurun waktuyang bersamaan,adapun100orangyangmeretweet
+beberapapostditwitterr'''
+)
+hasil('''Ada1234orang ataupenggunayang me ngunjungi profilperusahaaninidiinstagram
+sementaraditwitterada5678orang'''
+)
+
+def hasil(a):
+    b = re.sub('[rlsRLS]','*',a)
+    x = re.split('\s',b)
+    print(x)
+
+hasil('Ular laRi lurusssZZ')
+hasil('jeje suka BatagorRRRRrrrrr')
+hasil('rRiani alergi kacang') 
